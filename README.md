@@ -7,6 +7,7 @@
 $ git clone git@github.com:yaru22/plaid-take-home.git
 $ cd plaid-take-home
 $ npm install
+$ npm install -g nodemon
 $ npm run db:reset
 ```
 
