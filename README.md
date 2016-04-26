@@ -1,5 +1,5 @@
 # API
-This API is a REST API. JSON is returned by all responses (including errors). To see some usages of the API, refer to this doc or the test cases under `test/` directory.
+This API is a REST API. JSON is returned by all responses (including errors). To see some usages of the API, refer to this doc or the test cases at [`test/api.spec.js`](./test/api.spec.js).
 
 API endpoint
 ```
@@ -25,7 +25,7 @@ POST http://104.236.191.170/customers
 ```
 
 ##### Arguments
-- `name` (required): Non-empty string
+- `name` (required): Customer's full name. It has to be a non-empty string.
 
 ##### Example Request
 ```bash
@@ -115,7 +115,7 @@ POST http://104.236.191.170/accounts
 
 ##### Arguments
 - `customerId` (required): Valid customer id
-- `balance` (required): Positive number
+- `balance` (required): Account's initial balance. It has to be a positive number.
 
 ##### Example Request
 ```bash
@@ -185,7 +185,7 @@ POST http://104.236.191.170/transfers
 ##### Arguments
 - `accountFrom` (required): Valid account id (not the same id as `accountTo`)
 - `accountTo` (required): Valid account id (not the same id as `accountFrom`)
-- `amount` (required): Positive number
+- `amount` (required): Amount to transfer. It has to be a positive number.
 
 ##### Example Request
 ```bash
