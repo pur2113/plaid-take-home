@@ -1,0 +1,12 @@
+.DS_Store
+*.bak
+*.log
+*.swp
+.tern-port
+build_a_bank.md
+interview1.js
+interview2.js
+node_modules/
+npm-debug.log
+plaid-first-round.txt
+server/playground.js

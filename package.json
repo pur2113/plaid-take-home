@@ -1,0 +1,36 @@
+{
+  "name": "plaid-take-home",
+  "version": "0.1.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "lint": "\"`npm bin`\"/eslint --ext .js .",
+    "db:reset": "cd ./db && mysql -u root < ./setup.sql && cd ../",
+    "db:reset:test": "cd ./db && mysql -u root < ./setup.test.sql && cd ../",
+    "start": "NODE_PATH=`pwd`:$NODE_PATH nodemon --watch ./server -- ./runServer.js",
+    "test": "npm run db:reset:test && NODE_ENV=test NODE_PATH=`pwd`:$NODE_PATH \"`npm bin`\"/mocha --require ./test/hook --check-leaks --recursive --reporter spec --ui bdd ./test/*.spec.js"
+  },
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "body-parser": "^1.15.0",
+    "bookshelf": "^0.9.4",
+    "compression": "^1.6.1",
+    "express": "^4.13.4",
+    "http-status-codes": "^1.0.6",
+    "knex": "^0.10.0",
+    "lodash": "^4.11.1",
+    "mysql": "^2.10.2",
+    "winston": "^2.2.0"
+  },
+  "devDependencies": {
+    "babel-eslint": "^6.0.3",
+    "babel-plugin-transform-runtime": "^6.7.5",
+    "babel-preset-es2015": "^6.6.0",
+    "babel-preset-stage-0": "^6.5.0",
+    "chai": "^3.5.0",
+    "eslint": "^2.8.0",
+    "isomorphic-fetch": "^2.2.1",
+    "mocha": "^2.4.5"
+  }
+}
